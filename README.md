@@ -1,4 +1,4 @@
-=============
+
 About the App
 =============
 1. To run the app open it up in irb.:
@@ -13,9 +13,9 @@ About the App
     - This will display a list of your recent transactions by date.
 
 
-=========
+
  Notes
 =========
 
-- Make sure to top up your account before withdrawing. You have an unlimited overdraft and bank charges aren't cheap
+- Make sure to top up your account before withdrawing. You have an unlimited overdraft and bank charges aren't cheap.
 - Time travel is not yet possible, when entering dates make sure transactions are in time order to simulate the real world.
