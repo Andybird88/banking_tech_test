@@ -1,4 +1,9 @@
 
+Install Dependencies
+====================
+If you pulled the project from github you will need to run 'bundle install' inside the main
+project directory. This will install the relevent gems needed for the app to run.
+
 About the App
 =============
 1. To run the app open it up in irb.:
@@ -13,9 +18,22 @@ About the App
     - This will display a list of your recent transactions by date.
 
 
+Running Tests
+=============
 
- Notes
-=========
+- To run the tests type 'rspec' in the terminal within the main project directory.
+
+ Notes on use
+=============
 
 - Make sure to top up your account before withdrawing. You have an unlimited overdraft and bank charges aren't cheap.
 - Time travel is not yet possible, when entering dates make sure transactions are in time order to simulate the real world.
+
+Notes on high quality code
+==========================
+
+- TDD process used and 100% coverage acheived through tests
+- SRP, have seperated out each function to its own method
+- Only focus on requirements. Given the specification is basic. I chose not to overengineer this task. I have focused on delivering exactly what was asked for.
+- DRY, Have elinmated any duplication I could find.
+- Opening balance and statement printing can be changed easily.
