@@ -1,27 +1,41 @@
 # frozen_string_literal: true
-
+require './lib/statement'
+require './lib/transaction'
 class Account
-  attr_reader :balance
+  
 
-  def initialize
+  def initialize(statement = Statement.new, new_transaction = Transaction)
+    @recorded_transactions = []
+    @statement = statement
+    @new_transaction = new_transaction
     @balance = 0
-    @statement_data = []
   end
 
   def deposit(num, date)
-    @balance += num
-    @statement_data << [date, num, ' ||      ', @balance]
+   @balance += num
+   @recorded_transactions << @new_transaction.create(date, num, 0, @balance)
+   
+   return "thank you for your deposit"
+   
+
   end
 
   def withdraw(num, date)
     @balance -= num
-    @statement_data << [date, '      || ', num, @balance]
+    @recorded_transactions << @new_transaction.create(date, 0, num, @balance)
+   
+    return "Thank you for your withdrawal"
   end
 
-  def statement
-    puts '    Date   ||  Credit ||  Debit   || Balance '
-    @statement_data.each do |transaction|
-      puts " #{transaction[0]}||   #{transaction[1]}  #{transaction[2]}    || #{transaction[3]}  "
-    end
+  def print_statement
+    @statement.print(@recorded_transactions)
+    
   end
+
+  def balance
+    @balance
+  end
+  
+
+  
 end
