@@ -1,8 +1,11 @@
 
 Install Dependencies
 ====================
-If you pulled the project from github you will need to run 'bundle install' inside the main
-project directory. This will install the relevent gems needed for the app to run.
+If you pulled the project from github you will need to run 
+```
+bundle install
+``` 
+inside the main project directory. This will install the relevent gems needed for the app to run.
 
 About the App
 =============
@@ -20,8 +23,8 @@ require './lib/account'
 ```
 'your_account_name'.deposit( amount, date )
 ```
-    - The amount is how much you want to deposit
-    - The date is the date that you made the transaction
+- The amount is how much you want to deposit
+- The date is the date that you made the transaction
 5. Withdraw funds from you account: 
 ```
 'your_account_name'.withdraw( amount, date )
@@ -30,7 +33,8 @@ require './lib/account'
 ```
 'your_account_name'.statement
 ```
-    - This will display a list of your recent transactions by date.
+
+- This will display a list of your recent transactions by date.
 
 
 Running Tests
